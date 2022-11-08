@@ -8,6 +8,19 @@
 </head>
 <body>
 	<h1>Hello World</h1>
-	
+	<div id='container'></div>
+	<script type='text/javascript'>
+		function init(){
+			$Lightning.use("c:ProviderDetails_App",
+				      function(){
+				$Lightning.createComponent(
+					"c:Provider_Detail_Form",
+					{},
+				"container",
+				function(cmp){});
+			}
+				      );
+		}
+	</script>
 </body>
 </html>
