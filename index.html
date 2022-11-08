@@ -9,10 +9,11 @@
 <body onload="init()">
 	<p>It is Here!!!!</p>
 	<div id='LightningContainer'></div>
-	<h1>Hello World!!!!!!</h1>
+	<h1>Hello World checking....</h1>
 	<script type='text/javascript' src="https://bluestargenomics--dev1.sandbox.lightning.force.com/lightning/lightning.out.js"</script>
 	<script type='text/javascript'>
 		function init(){
+		<p>Inside Init!</p>
 			$Lightning.use("c:ProviderDetails_App", function() {
         $Lightning.createComponent("c:Provider_Detail_Form", { },"LightningContainer",
                                    function(component) {
