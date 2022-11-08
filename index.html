@@ -1,64 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hello World</title>
 </head>
 <body onload="init()">
 	<p>It is Here!!!!</p>
-	<div id='container'></div>
-	<h1>Hello World</h1>
-	<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
-
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Flows
-
-		embedded_svc.settings.enabledFeatures = ['Flows'];
-		embedded_svc.settings.entryFeature = 'Flows';
-
-		embedded_svc.init(
-			'https://bluestargenomics--dev1.sandbox.my.salesforce.com',
-			'https://bluestargenomics--dev1.sandbox.my.site.com/ProviderForm',
-			gslbBaseURL,
-			'00D8K0000008gJV',
-			'Test',
-			{
-				
-			}
+	<div id='Container'></div>
+	<h1>Hello World!qqq!!</h1>
+	<script type='text/javascript' src="https://bluestargenomics--dev1.sandbox.my.site.com/lightning/lightning.out.js"></script>
+    <script type='text/javascript'>
+		function init(){
+			$Lightning.use("c:ProviderDetails_App", function() {
+        $Lightning.createComponent("c:Provider_Detail_Form", { },"Container",
+                                   function(cmp) {
+                                       
+                                   });
+		},
+		'https://bluestargenomics--dev1.sandbox.my.site.com'
 		);
-	};
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://bluestargenomics--dev1.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
-</script>
+		}
+	</script>
 </body>
 </html>
