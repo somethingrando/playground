@@ -9,19 +9,16 @@
 <body onload="init()">
 	<p>It is Here!!!!</p>
 	<div id='container'></div>
-	<h1>Hello World</h1>
+	<h1>Hello World!!!!!!</h1>
 	<script type='text/javascript' src="https://bluestargenomics--dev1.sandbox.my.site.com/lightning/lightning.out.js"</script>
 	<script type='text/javascript'>
 		function init(){
-			$Lightning.use("c:ProviderDetails_App",
-				      function(){
-				$Lightning.createComponent(
-					"c:Provider_Detail_Form",
-					{},
-				"container",
-				function(cmp){});
-			}
-				      );
+			$Lightning.use("c:ProviderDetails_App", function() {
+        $Lightning.createComponent("c:Provider_Detail_Form", { },"LightningContainer",
+                                   function(component) {
+                                       
+                                   });
+    });
 		}
 	</script>
 </body>
