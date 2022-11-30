@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Provider Form</title>
+</head>
+<body onload="init()">
+	<div id='Container'></div>
+	<script type='text/javascript' src="https://bluestargenomics--dev1.sandbox.my.site.com/lightning/lightning.out.js"></script>
+    <script type='text/javascript'>
+		function init(){
+			$Lightning.use("c:EmbeddedDocuSignApp", function() {
+        $Lightning.createComponent("c:EmbeddedDocuSignComponent", { },"Container",
+                                   function(cmp) {
+                                       
+                                   });
+		},
+		'https://bluestargenomics--dev1.sandbox.my.site.com'
+		);
+		}
+	</script>
+</body>
+</html>
