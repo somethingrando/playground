@@ -1,0 +1,41 @@
+<html>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="check_if_capcha_is_filled" id="test-order-form" novalidate="novalidate">
+        <div class="section">Provider Details</div>
+        <div class="inner-wrap provider-details-wrap">
+            <input type="hidden" name="captcha_settings" value="{&quot;keyname&quot;:&quot;Google_reCAPTCHA&quot;,&quot;fallback&quot;:&quot;true&quot;,&quot;orgId&quot;:&quot;00D5f000005XuyE&quot;,&quot;ts&quot;:&quot;1669943911888&quot;}">
+            <input type="hidden" name="oid" value="00D5f000005XuyE">
+            <input type="hidden" name="retURL" value="https://www.bluestargenomics.com/test-ordering/confirmation/#success">
+            <input type="hidden" name="recordType" value="0125f000000zEubAAE">
+            <input id="lead_source" name="lead_source" type="hidden" value="Account Setup Form">
+            <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required="" placeholder="First Name*"><br>
+            <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required="" placeholder="Last Name*"><br>
+            <label for="NPI_Number__c">NPI #</label><input id="NPI_Number__c" maxlength="200" name="NPI_Number__c" size="20" type="text" required="" placeholder="NPI #*"><br>
+            <label for="company">Institution/Account Name</label><input id="company" maxlength="40" name="company" size="20" type="text" required="" placeholder="Institution/Account Name*">
+        </div>
+        <div class="section">Shipping Address</div>
+        <div class="inner-wrap shipping-address-wrap">
+            <label for="street">Street</label><textarea name="street" required="" placeholder="Street*"></textarea><br>
+            <label for="city">City</label><input id="city" maxlength="40" name="city" size="20" type="text" required="" placeholder="City*"><br>
+            <label for="state">State/Province</label><input id="state" maxlength="20" name="state" size="20" type="text" required="" placeholder="State/Province*"><br>
+            <label for="country">Country</label><input id="country" maxlength="40" name="country" size="20" type="text" required="" placeholder="Country*"><br>
+            <label for="zip">Zip</label><input id="zip" maxlength="20" name="zip" size="20" type="text" required="" placeholder="Zip*"><br>
+            <label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="email" required="" placeholder="Email*"><br>
+            <label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text" required="" placeholder="Phone*"><br>
+            <label for="fax">Secure Fax Number</label><input id="fax" maxlength="40" name="fax" size="20" type="text" placeholder="Secure Fax Number">
+        </div>
+        <div class="section">Additional Information</div>
+        <div class="inner-wrap additional-information-wrap">
+            <label for="OM_First_Name__c">Office Manager First Name</label><input id="OM_First_Name__c" maxlength="200" name="OM_First_Name__c" size="20" type="text" required="" placeholder="Office Manager First Name*"><br>
+            <label for="OM_Last_Name__c">Office Manager Last Name</label><input id="OM_Last_Name__c" maxlength="200" name="OM_Last_Name__c" size="20" type="text" required="" placeholder="Office Manager Last Name*"><br>
+            <label for="OM_Email__c">Email</label><input id="OM_Email__c" maxlength="80" name="OM_Email__c" size="20" type="email" required="" placeholder="Email*"><br>
+            <label for="OM_Phone__c">Phone</label><input id="OM_Phone__c" maxlength="40" name="OM_Phone__c" onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" required="" placeholder="Phone*"><br>
+            <div class="checkbox">
+                <input id="Authorized__c" name="Authorized__c" type="checkbox" value="1" required="" class="custom-jcf-ignore"><label for="Authorized__c">Authorize Bluestar Genomics to create a customer account for my practice*</label>
+            </div>
+        </div>
+        <div class="form-footer clearfix">
+            <div class="g-recaptcha" id="thisiscaptcha" data-sitekey="6LeDAiseAAAAABAHE-8GMzvQqYKEG9Cz0TcSdAvk"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LeDAiseAAAAABAHE-8GMzvQqYKEG9Cz0TcSdAvk&amp;co=aHR0cHM6Ly93d3cuYmx1ZXN0YXJnZW5vbWljcy5jb206NDQz&amp;hl=en&amp;v=Km9gKuG06He-isPsP6saG8cn&amp;theme=light&amp;size=normal&amp;cb=m87hdnjo60ee" width="304" height="78" role="presentation" name="a-b1ocpj1qnwzz" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            <button class="button et_pb_button disabled" type="submit" name="submit">Submit</button>
+        </div>
+    </form>
+</html>
